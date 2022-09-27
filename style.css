@@ -1,6 +1,52 @@
-#title{
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-color: rgb(186, 226, 43) !important;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;700&display=swap');
 
+#font{
+font-family: 'Cormorant', serif;
+color: black;
+}
+
+#title{
+font-weight: 500;
+font-size: 50pt;
+
+display: flex;
+justify-content: center;
+}
+
+/* No se alinean a los lados aunque tienen el flex */
+.mini-1{
+display: flex;
+align-content: flex-start;
+font-weight: 400;
+font-size: small;
+color: #9A9A9A;
+}
+
+.mini-2{
+display: flex;
+align-content: flex-end;
+font-weight: 400;
+font-size: small;
+color: #9A9A9A;
+}
+
+.order-c {
+    display: flex;
+    align-content: center;
+    font-size: 11pt;
+    font-weight: 400;
+    padding-left: 150pt;
+    padding-right: 150pt;
+
+}
+
+.image-first{
+    padding-left: 150pt;
+    padding-right: 150pt;
+}
+
+.subtitle{
+    color: black !important;
+    font-weight: 700 !important;
 
 }
