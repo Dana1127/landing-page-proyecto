@@ -13,10 +13,16 @@ display: flex;
 justify-content: center;
 }
 
-/* No se alinean a los lados aunque tienen el flex */
+.text-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .mini-1{
 display: flex;
-align-content: flex-start;
+align-self: flex-start;
 font-weight: 400;
 font-size: small;
 color: #9A9A9A;
@@ -24,16 +30,17 @@ color: #9A9A9A;
 
 .mini-2{
 display: flex;
-align-content: flex-end;
+align-self: flex-end;
 font-weight: 400;
 font-size: small;
 color: #9A9A9A;
 }
 
+
 .order-c {
     display: flex;
     align-content: center;
-    font-size: 11pt;
+    font-size: 13pt;
     font-weight: 400;
     padding-left: 150pt;
     padding-right: 150pt;
