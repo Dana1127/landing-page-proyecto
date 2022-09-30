@@ -66,7 +66,7 @@ margin-top: 5%;
 
 
 
-.slider{
+/* .slider{
     width: 50%;
     height: 960;
     overflow: hidden;
@@ -101,7 +101,7 @@ height: 100%;
 
 75%{margin-left: -300;}
 100%{margin-left: -300;}
-}
+} */
 
 
 
@@ -152,8 +152,31 @@ height: 100%;
 background-color: #F2882D !important;
 }
 
-.text-bottom{
+
+.images-bottom{
+    align-items: center;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.sub-bottom{
+    font-size: large;
+    font-weight: 700 !important;
     display: flex;
     justify-content: space-between;
+    margin-left: 12%;
+    margin-right: 12%;
+}
 
+.text-testimonies{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.images-carrusel{
+   margin-left: 3%; 
+   margin-right: 0%;
+
+   flex-wrap: no-wrap;
 }
