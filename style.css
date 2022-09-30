@@ -13,14 +13,15 @@ display: flex;
 justify-content: center;
 }
 
-.text-header{
+#text-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-top: 01%;
 }
 
-.mini-1{
+.mini-right{
 display: flex;
 align-self: flex-start;
 font-weight: 400;
@@ -28,12 +29,23 @@ font-size: small;
 color: #9A9A9A;
 }
 
-.mini-2{
+.mini-left{
 display: flex;
 align-self: flex-end;
 font-weight: 400;
 font-size: small;
 color: #9A9A9A;
+}
+
+
+#icon-search{
+margin-left: 2%;
+margin-top: 5%;
+}
+
+#icon-cart{
+    margin-left: 2%;
+margin-top: 5%;
 }
 
 
