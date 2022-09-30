@@ -59,6 +59,11 @@ margin-top: 5%;
 
 }
 
+.animation:hover{
+    font-weight: 700;
+    color: black;
+}
+
 .image-first{
     padding-left: 150pt;
     padding-right: 150pt;
