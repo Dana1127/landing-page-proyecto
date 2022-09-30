@@ -114,7 +114,7 @@ height: 100%;
 .text{
     display: flex;
     flex-direction: row;
-    justify-content: space between;
+    justify-content: space-around;
 }
 
 
@@ -170,9 +170,12 @@ background-color: #F2882D !important;
 
 .text-testimonies{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 flex-wrap: wrap;
+justify-content: space-between;
 }
+
+
 
 .images-carrusel{
    margin-left: 3%; 
