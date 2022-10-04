@@ -17,6 +17,10 @@ justify-content: center;
 
 }
 
+.menu-ham{
+    display: none !important;
+}
+
 #text-header{
     display: flex;
     flex-direction: row;
@@ -115,12 +119,17 @@ height: 100%;
 
 }
 
-.text{
+.alignment{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
+.text-testimonies{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
 
 .footer-look{
     background-color: #222222 !important;
@@ -172,12 +181,39 @@ background-color: #F2882D !important;
     margin-right: 12%;
 }
 
-.text-testimonies{
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
 
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+   /* height: auto !important;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 
 .images-carrusel{
@@ -203,13 +239,18 @@ justify-content: center;
     font-size: 0%;
     }
 
-    .mini-left{
-        font-size: 0%;
+    .mini-left > h4{
+        display: none;
         }
     
     .order-c{
     font-size: 0%;
     }
+.menu-ham{
+display: block !important;
+}
+
+
 #icon-search{
 display: flex;
 align-self: flex-end;

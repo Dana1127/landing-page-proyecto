@@ -7,6 +7,11 @@
     <title>Teuta Matoshi</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="font">
 
@@ -14,7 +19,8 @@
     <section id="text-header">
 
       <h4 class="mini-right my-4 mx-6"> Free shipping worldwide</h4>
-  
+
+      <i class="fa-solid fa-bars menu-ham"></i>
       <article class= "mini-left mx-6">
         <h4 class="my-4 mx-4">Log in or create account</h4>
 
@@ -125,7 +131,7 @@
       </div>
 </article>
 
-<section>
+<!--<section>
     <h2 class="subtitle mx-6"> Lastest Collections</h2>
     <article class="images-carrusel my-6">
 <img src="/scr/carrusel1.png" alt="">
@@ -142,7 +148,23 @@
 </div>
     </article>
 </section>
+-->
 
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="/scr/carrusel1.png" alt=""></div>
+    <div class="swiper-slide"><img src="/scr/carrusel2.png" alt=""></div>
+    <div class="swiper-slide"><img src="/scr/carrusel3.png" alt=""></div>
+    <div class="swiper-slide"><img src="/scr/carrusel4.png" alt=""></div>
+    <div class="swiper-slide">Slide 5</div>
+    <div class="swiper-slide">Slide 6</div>
+    <div class="swiper-slide">Slide 7</div>
+    <div class="swiper-slide">Slide 8</div>
+    <div class="swiper-slide">Slide 9</div>
+  </div>
+  <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+</div>
 
 <section>
   <h2 class="subtitle mx-6"> Other Collections</h2>
@@ -156,43 +178,49 @@
   <p> SpringSummer20’</p>
   <p> SpringSummer19’</p>
   <p> FallWinter19’’</p>
-
 </div>
   </article>
 </section>
 
-<section>
-  <article  class="images-bottom mx-6">
-    <img src="/scr/person1.png" alt="">
-    <img src="/scr/person2.png" alt="">
-    <img src="/scr/person3.png" alt="">
-  </article>
 
-  <article>
-    <div class="subtitle text">
+<section class="alignment">
+
+  <section class="mx-6" >
+    <figure>
+      <img src="/scr/person1.png" alt="">
+    </figure>
+    <article class="text-testimonies">
       <h2>Yazmin K</h2>
-      <h2>Marta K</h2>
-      <h2>Talisa F</h2>
-    </div>
-  </section>
-
-  <section class="text mx-6">
-    <div class="text-testimonies">
       <p>24/4/21</p>
       <p>Is a completely dream dress, the quality of the fabric is perfect and the design is absolutely beautiful.</p>
-    </div>
-    
-    </div class="text-testimonies">
-      <p>25/4/21</p>
-      <p>Thanks to the dress, I was the centre of the attention for the night! It is a beautiful color and gives your body a very flattering, feminine  silhouette...</p>
-    </div>
-    
-    </div class="text-testimonies">
-    <p>15/4/21</p>
-    <p>Absolutely loved this dress!! Fell in love as soon as i saw it on the Instagram page! I’m going to wear it for my formal in June!</p>
-    </div>    
+    </article>
+</section>
 
-  </section>
+<section class="mx-6">
+  <figure>
+    <img src="/scr/person2.png" alt="">
+  </figure>
+  <article class="text-testimonies">
+    <h2>Marta K</h2>
+    <p>25/4/21</p>
+    <p>Thanks to the dress, I was the centre of the attention for the night! It is a beautiful color and gives your body a very flattering, feminine  silhouette...</p>
+  </article>
+</section>
+
+<section class="mx-6">
+<figure>
+  <img src="/scr/person3.png" alt="">
+</figure>
+<article class="text-testimonies">
+  <h2>Talisa F</h2>
+  <p>15/4/21</p>
+  <p>Absolutely loved this dress!! Fell in love as soon as i saw it on the Instagram page! I’m going to wear it for my formal in June!</p>
+</article>
+</section>
+
+
+</section>
+
 
 
 
@@ -226,8 +254,8 @@
 
   <div>
     <img class="mx-3" src="/scr/pinterest.png" alt="">
-    <a href=""><img src="./scr/instagram.png" alt=""></a>
-    <a href="https://www.instagram.com/teutamatoshi/?hl=es"></a> 
+    <a href="https://www.instagram.com/teutamatoshi/?hl=es"><img src="./scr/instagram.png" alt=""></a>
+
 
   </div>
 </section>
@@ -237,14 +265,15 @@
   <p class="has-text-light mx-2"> Sign up for the latest news, offers and styles</p>
 
   <input class="input mx-2" type="text" placeholder="Your email">
- >
+ 
 <input class="button my-4 sub-button" type="submit" value="Subscribe">
 
 </div>
-
-
-
 </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="./index.js"></script>
 
 </body>
 </html>
