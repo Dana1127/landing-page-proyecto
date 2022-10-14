@@ -1,38 +1,63 @@
 let products = [
     {
-        imgUrl: "",
-        name: "",
-        price: "$1,200",
-        description: "",
-        size: "",
-        type: "",
-        collection: ""
+        imgUrl: "https://i.pinimg.com/564x/93/4c/3e/934c3eaa78e29d069546bcd3545972ab.jpg",
+        name: "Butterfly Blossom dress",
+        price: "$1,250 USD",
+        description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
+        sizes: "US 0, US 2, US 4, US 6",
+        type: "Embroidery ",
+        collection: "FallWinter21'"
 
     },
 
     {
-        imgUrl: "",
-        name: "",
+        imgUrl: "https://i.pinimg.com/564x/55/93/1c/55931cd010f3fe3663fb2ce9222cc13a.jpg",
+        name: "Cloud Starlet Cape Gown",
         price: "$1,200",
-        description: "",
-        size: "",
+        description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
+        sizes: "US 0, US 2, US 4, US 6",
         type: "",
         collection: ""
-    }
+    },
+
+    {
+      imgUrl: "https://i.pinimg.com/564x/73/3b/2d/733b2d0d14dc2237981cf02e8585b2eb.jpg",
+      name: "Melrose Iridescent Gown",
+      price: "$1,190",
+      description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
+      sizes: "US 0, US 2, US 4, US 6",
+      type: "",
+      collection: ""
+  },
+
+  {
+    imgUrl: "https://i.pinimg.com/564x/bf/8f/4e/bf8f4ec686ae803c07542bcf05ef84ce.jpg",
+    name: "Melrose Iridescent Gown",
+    price: "$1,190",
+    description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
+    sizes: "US 0, US 2, US 4, US 6",
+    type: "",
+    collection: ""
+},
+
   ]
 
 let container = document.getElementById('container');
 
 products.forEach(product => {
-container.innerHTML += `<section class="product-look">
-<figure>
-  <img src="/scr/person3.png" alt="">
-</figure>
-<article class="text-testimonies">
-  <h2> ${product.name}</h2>
-  <p> ${product.price}</p>
-  <p>${product.description}</p>
-</article>
-</section>`
+container.innerHTML += `<div class="card mx-4">
+<div class="card-image ">
+  <figure class="image is-6by3">
+    <img src= ${product.imgUrl} alt="Placeholder image">
+</div>
+    <div class="media-content">
+      <p class="title is-4">${product.name}</p>
+      <p class="subtitle is-6">${product.price}</p>
+    </div>
+
+  <div class="content">
+  ${product.description}
+  </div>
+</div>`
 
 });
