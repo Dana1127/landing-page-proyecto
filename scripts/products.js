@@ -1,7 +1,7 @@
 let products = [
     {
-        imgUrl: "https://i.pinimg.com/564x/93/4c/3e/934c3eaa78e29d069546bcd3545972ab.jpg",
-        name: "Butterfly Blossom dress",
+        imgUrl: "./filterImages/dress1.png",
+        name: "Fresia Garden skies kiss",
         price: "$1,250 USD",
         description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
         sizes: "US 0, US 2, US 4, US 6",
@@ -32,7 +32,7 @@ let products = [
 
   {
     imgUrl: "https://i.pinimg.com/564x/bf/8f/4e/bf8f4ec686ae803c07542bcf05ef84ce.jpg",
-    name: "Melrose Iridescent Gown",
+    name: "Gold Flower Dream",
     price: "$1,190",
     description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
     sizes: "US 0, US 2, US 4, US 6",
@@ -45,13 +45,13 @@ let products = [
 let container = document.getElementById('container');
 
 products.forEach(product => {
-container.innerHTML += `<div class="card mx-4">
-<div class="card-image ">
-  <figure class="image is-6by3">
+container.innerHTML += `<div class="card mx-2 px-4 py-4">
+<div class=" ">
+  <figure class="image is-6by3 card-image">
     <img src= ${product.imgUrl} alt="Placeholder image">
 </div>
     <div class="media-content">
-      <p class="title is-4">${product.name}</p>
+      <p class="title is-4 py-3">${product.name}</p>
       <p class="subtitle is-6">${product.price}</p>
     </div>
 
