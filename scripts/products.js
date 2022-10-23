@@ -3,9 +3,9 @@ let products = [
         imgUrl: "./filterImages/dress1.png",
         name: "Fresia Garden skies kiss",
         price: "$1,250 USD",
-        description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
+        description: "The Fresia Garden skies is perfect for any occasion, with an embroidered bottom skirt and beautiful motifs of golden stars and moons",
         sizes: "US 0, US 2, US 4, US 6",
-        type: "Embroidery ",
+        type: "Embroidery, ankle length",
         collection: "FallWinter21'"
 
     },
@@ -16,8 +16,8 @@ let products = [
         price: "$1,200",
         description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
         sizes: "US 0, US 2, US 4, US 6",
-        type: "",
-        collection: ""
+        type: "Cape-gown, floor length",
+        collection: "FallWinter21'"
     },
 
     {
@@ -26,18 +26,18 @@ let products = [
       price: "$1,190",
       description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
       sizes: "US 0, US 2, US 4, US 6",
-      type: "",
-      collection: ""
+      type: "Floor length, slit open, buttons",
+      collection: "SpringSumer 22'"
   },
 
   {
     imgUrl: "https://i.pinimg.com/564x/bf/8f/4e/bf8f4ec686ae803c07542bcf05ef84ce.jpg",
     name: "Gold Flower Dream",
-    price: "$1,190",
+    price: "$1,200",
     description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
     sizes: "US 0, US 2, US 4, US 6",
-    type: "",
-    collection: ""
+    type: "Above ankle length, puff sleeves",
+    collection: "FallWinter 21'"
 },
 
   ]
