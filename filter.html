@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="/styles/shop.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
-<body>
-    <div id="container" class="card-look text">
+<body class= "text">
+    <h1 class="title is-3"> Shop</h1>
 
-    </div>
+    <label for="keyword">Keyword: </label>
+    <input class="input" type="text" id= "keyword">
+
+    <label for="keyword">Categories: </label>
+    <select name="category" id="category">
+ <option value="accesories">Accesories</option>
+    </select>
+
+
+    <section id="products-container">
+    </section>
 
     <script src="./scripts/products.js"></script>
 </body>
