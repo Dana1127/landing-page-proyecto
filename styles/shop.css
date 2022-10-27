@@ -57,6 +57,13 @@ header{
     text-align: center;
 }
 
+
+.search-bar{
+display: flex;
+align-items: baseline;
+}
+
+
 #products-container{
     width: 100%;
     /*background-color: aliceblue;*/
