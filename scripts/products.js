@@ -4,39 +4,39 @@ let products = [
         name: "Fresia Garden skies kiss",
         price: "$1,250 USD",
         description: "The Fresia Garden skies is perfect for any occasion, with an embroidered bottom skirt and beautiful motifs of golden stars and moons",
-        sizes: "US 0, US 2, US 4, US 6",
-        type: "Embroidery, ankle length",
+        length: "ankle length",
+        type: "Embroidery",
         collection: "FallWinter21'"
 
     },
 
     {
-        imgUrl: "https://i.pinimg.com/564x/55/93/1c/55931cd010f3fe3663fb2ce9222cc13a.jpg",
+        imgUrl: "./filterImages/dress2.png",
         name: "Cloud Starlet Cape Gown",
         price: "$1,200",
         description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-        sizes: "US 0, US 2, US 4, US 6",
-        type: "Cape-gown, floor length",
+        length: "floor length",
+        type: "Cape-gown",
         collection: "FallWinter21'"
     },
 
     {
-      imgUrl: "https://i.pinimg.com/564x/73/3b/2d/733b2d0d14dc2237981cf02e8585b2eb.jpg",
+      imgUrl: "./filterImages/dress3.png",
       name: "Melrose Iridescent Gown",
       price: "$1,190",
       description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-      sizes: "US 0, US 2, US 4, US 6",
-      type: "Floor length, slit open, buttons",
+      length: "Floor length",
+      type: ["slit open", "buttons"],
       collection: "SpringSumer 22'"
   },
 
   {
-    imgUrl: "https://i.pinimg.com/564x/bf/8f/4e/bf8f4ec686ae803c07542bcf05ef84ce.jpg",
+    imgUrl: "./filterImages/dress4.png",
     name: "Gold Flower Dream",
     price: "$1,200",
     description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-    sizes: "US 0, US 2, US 4, US 6",
-    type: "Above ankle length, puff sleeves",
+    length: "Above ankle length",
+    type: "puff sleeves",
     collection: "FallWinter 21'"
 },
 //cambiar imagenes
@@ -46,8 +46,8 @@ let products = [
   name: "Gold Flower Dream",
   price: "$1,200",
   description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-  sizes: "US 0, US 2, US 4, US 6",
-  type: "Above ankle length, puff sleeves",
+  length: "length",
+  type: "puff sleeves",
   collection: "FallWinter 21'"
 },
 
@@ -56,8 +56,8 @@ let products = [
   name: "Gold Flower Dream",
   price: "$1,200",
   description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-  sizes: "US 0, US 2, US 4, US 6",
-  type: "Above ankle length, puff sleeves",
+  length: "length",
+  type: "puff sleeves",
   collection: "FallWinter 21'"
 },
 {
@@ -65,18 +65,8 @@ let products = [
   name: "Gold Flower Dream",
   price: "$1,200",
   description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-  sizes: "US 0, US 2, US 4, US 6",
-  type: "Above ankle length, puff sleeves",
-  collection: "FallWinter 21'"
-},
-
-{
-  imgUrl: "https://i.pinimg.com/564x/bf/8f/4e/bf8f4ec686ae803c07542bcf05ef84ce.jpg",
-  name: "Gold Flower Dream",
-  price: "$1,200",
-  description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-  sizes: "US 0, US 2, US 4, US 6",
-  type: "Above ankle length, puff sleeves",
+  length: "length",
+  type: "puff sleeves",
   collection: "FallWinter 21'"
 },
 
@@ -85,8 +75,8 @@ let products = [
   name: "Gold Flower Dream",
   price: "$1,200",
   description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-  sizes: "US 0, US 2, US 4, US 6",
-  type: "Above ankle length, puff sleeves",
+  length: "length",
+  type: "puff sleeves",
   collection: "FallWinter 21'"
 },
 
@@ -95,12 +85,24 @@ let products = [
   name: "Gold Flower Dream",
   price: "$1,200",
   description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
-  sizes: "US 0, US 2, US 4, US 6",
-  type: "Above ankle length, puff sleeves",
+  length: "length",
+  type: "puff sleeves",
+  collection: "FallWinter 21'"
+},
+
+{
+  imgUrl: "https://i.pinimg.com/564x/bf/8f/4e/bf8f4ec686ae803c07542bcf05ef84ce.jpg",
+  name: "Gold Flower Dream",
+  price: "$1,200",
+  description: "Butterfly Blossom Dress perf4ect for any occasion, with an embroidered bottom skirt and beautiful motifs of our gerbera daisies",
+  length: "length",
+  type: "puff sleeves",
   collection: "FallWinter 21'"
 },
 
   ]
+
+ displayTypes ();
 
 let container = document.getElementById('products-container');
 
@@ -120,3 +122,41 @@ container.innerHTML += `<div class="card mx-2 px-4 py-4">
 </div>`
 
 });
+
+
+const keywordElem = document.getElementById('keyword');
+keywordElem.addEventListener("change", (event) => handleKeyword(keywordElem));
+
+
+
+//Métodos
+function displayTypes(){
+  const typesArr = []
+  products.forEach((product)=> {
+    if(!typesArr.includes(product.type)){
+      typesArr.push(product.type)
+    }
+  });
+  console.log(typesArr)
+
+  //Colocar nombres en el dropdown
+  const dropdown = document.getElementById('type')
+
+  typesArr.forEach((type)=> {
+  const optionElem = document.createElement('option')
+  optionElem.value = type
+  optionElem.textContent = type
+
+  dropdown.append(optionElem)
+})
+}
+
+
+function handleKeyword(input){
+  console.log(input.value);
+}
+
+/* const filterTypes = products.map(product => ({
+
+
+})); */
