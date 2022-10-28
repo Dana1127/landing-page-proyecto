@@ -11,24 +11,29 @@ const url = window.location.search;
     let containerItem= document.getElementById("container");
     
     containerItem.innerHTML += `
+    <section class="align-sections">
     <div class="card mx-2 px-4 py-4">
 <div class=" ">
   <figure class="image is-6by3">
     <img class= "card-image" src= ${productDetail.imgUrl} alt="Placeholder image">
     
 </div>
-    <div class="media-content">
-      <p class="title is-5 py-3 my-1">${productDetail.name}</p>
-      <p class="subtitle is-5 my-1">${productDetail.price}</p>
-      <p class="subtitle is-6">${productDetail.collection}</p>
-    </div>
+</div>
+    <section class="text">
+      <p class="title is-3 py-3 mx-3">${productDetail.name}</p>
+      <p class="subtitle is-5 my-1 mx-3 has-text-weight-bold">${productDetail.price}</p>
+      <p class="subtitle is-5 mx-3">${productDetail.collection}</p>
+      <p class="subtitle is-5 mx-3">${productDetail.description}</p>
 
-</div>`
+      
+    <ul>
+    <li class="subtitle is-6 mx-3 has-text-weight-bold">Length: ${productDetail.length}</li>
+    <li class="subtitle is-6 mx-3 has-text-weight-bold"> Type: ${productDetail.type}</li>
+</ul>
 
+    </section>
 
+    </section>
 
-/* products.forEach(product => {
-    container.innerHTML += `
-     `
-    
-    }); */
+`
+
