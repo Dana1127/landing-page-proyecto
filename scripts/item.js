@@ -33,6 +33,10 @@ const url = window.location.search;
 
     </section>
 
+    <article>
+    <button> Add to cart</button>
+    </article>
+
     </section>
 
 `

@@ -251,7 +251,7 @@ let keyword = "";
 let type = "all";
 
 displayTypes ();
-displayProducts (products);
+//displayProducts (products);
 
 const keywordElem = document.getElementById('keyword');
 keywordElem.addEventListener("change", (event) => handleKeyword(keywordElem));
@@ -287,13 +287,13 @@ function displayTypes(){
 function handleKeyword(input) {
   keyword = input.value;
   filterByAllFilters();
-  displayProducts(filteredProducts);
+  (filteredProducts);
 }
 
 function handleTypes(input) {
   type = input.value;
   filterByAllFilters();
-  displayProducts(filteredProducts);
+  products(filteredProducts);
 }
 
 function filterByAllFilters() {
@@ -302,7 +302,8 @@ function filterByAllFilters() {
     const hasKeyword =
       product.name.toLowerCase().includes(keyword.toLowerCase()) ||
       product.description.toLowerCase().includes(keyword.toLowerCase()) ||
-      product.keywords.toLowerCase().includes(keyword.toLowerCase());
+      product.collection.toLowerCase().includes(keyword.toLowerCase())
+      ;
     console.log(hasKeyword);
     const isType = product.type === type || type === "all";
     console.log(isType);
