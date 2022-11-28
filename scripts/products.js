@@ -200,6 +200,7 @@ collection: "FallWinter 20'"
 
 {
 id: 19,
+
 imgUrl: "./filterImages/dress19.png",
 name: "Garden of Flowers",
 price: "$1,200 USD",
@@ -226,25 +227,29 @@ collection: "FallWinter 20'"
   
 
 let container = document.getElementById('products-container');
+displayProducts(products);
 
-products.forEach(product => {
-container.innerHTML += `<a href= './item.html?id=${product.id}'>
-<div class="card mx-2 px-4 py-4">
-<div class=" ">
-  <figure class="image is-6by3">
-    <img class= "card-image" src= ${product.imgUrl} alt="Placeholder image">
-    
-</div>
-    <div class="media-content">
-      <p class="title is-5 py-3 my-1">${product.name}</p>
-      <p class="subtitle is-5 my-1">${product.price}</p>
-      <p class="subtitle is-6">${product.collection}</p>
+function displayProducts(productsArr){
+  container.innerHTML= "";
+  productsArr.forEach(product => {
+    container.innerHTML += `<a href= './item.html?id=${product.id}'>
+    <div class="card mx-2 px-4 py-4">
+    <div class=" ">
+      <figure class="image is-6by3">
+        <img class= "card-image" src= ${product.imgUrl} alt="Placeholder image">
+        
     </div>
-
-</div>
-</a> `
-
-});
+        <div class="media-content">
+          <p class="title is-5 py-3 my-1">${product.name}</p>
+          <p class="subtitle is-5 my-1">${product.price}</p>
+          <p class="subtitle is-6">${product.collection}</p>
+        </div>
+    
+    </div>
+    </a> `
+    
+    });
+}
 
 let filteredProducts = [];
 let keyword = "";
@@ -257,19 +262,25 @@ const keywordElem = document.getElementById('keyword');
 keywordElem.addEventListener("change", (event) => handleKeyword(keywordElem));
 
 
-
 //Métodos
 function displayTypes(){
   const typesArr = []
   products.forEach((product)=> {
-    if(!typesArr.includes(product.type)){
-      typesArr.push(...product.type)
-    }
+    product.type.forEach(type => {
+      if(!typesArr.includes(type)){
+        typesArr.push(type)
+      }
+    })
   });
+  
+
+
+
   console.log(typesArr)
 
   //Colocar nombres en el dropdown
   const dropdown = document.getElementById('type')
+dropdown.addEventListener("change",(event)=> handleTypes(dropdown))
 
   typesArr.forEach((type)=> {
   const optionElem = document.createElement('option')
@@ -287,13 +298,13 @@ function displayTypes(){
 function handleKeyword(input) {
   keyword = input.value;
   filterByAllFilters();
-  (filteredProducts);
+  displayProducts(filteredProducts);
 }
 
 function handleTypes(input) {
   type = input.value;
   filterByAllFilters();
-  products(filteredProducts);
+  displayProducts(filteredProducts);
 }
 
 function filterByAllFilters() {
@@ -305,7 +316,11 @@ function filterByAllFilters() {
       product.collection.toLowerCase().includes(keyword.toLowerCase())
       ;
     console.log(hasKeyword);
-    const isType = product.type === type || type === "all";
+
+    let isType;
+    product.type.forEach(typeElem => {
+    isType = typeElem === type || type === "all";
+  });
     console.log(isType);
     return hasKeyword && isType;
   });

@@ -34,6 +34,10 @@ font-size: small;
 color: #9A9A9A;
 }
 
+#button-admin{
+/* display:none; */
+}
+
 .mini-left{
 display: flex;
 align-self: flex-end;
