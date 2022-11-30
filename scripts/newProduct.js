@@ -1,5 +1,5 @@
-import {addTask, getAllTasks} from './firebase.js'
-
+import {addTask, getAllTasks} from './firebase.js' //para que importe nada mas el metodo que necesito del archivo
+import productsArray from './products.json' assert {type: 'json'}; //manera de escribir el import para que sepa que es un json
 
 
 const button = document.getElementById('submit-button')
@@ -7,6 +7,9 @@ button.addEventListener('click', (e)=> clickForm(e))
 
 let tasks = await getAllTasks() //Retorna lo que mandamos a la db con la funcion
 displayTasks();
+
+
+console.log(productsArray);
 
 function displayTasks(){
 const taskContainer = document.getElementById('tasks-container')
@@ -31,6 +34,6 @@ async function clickForm(e){
   //Para añadir las tareas
   await addTask(title, description)
   //Este es para actualizarlas (por eso el await)
-  tasks = await getAllTasks() 
-  displayTasks()
+  tasks = await getAllTasks() ;
+  displayTasks();
 }

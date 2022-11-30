@@ -1,6 +1,8 @@
-        // Import the functions you need from the SDKs you need
+
+      //Importo solo los metodos que voy a usar de firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
         import { getFirestore, collection, addDoc, getDocs, onSnapshot, query, where} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js" 
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -18,16 +20,9 @@
         const app = initializeApp(firebaseConfig);
 
         const db = getFirestore(app);
+        const auth = getAuth(app); //inicializar autenticación
 
-/*         const unsubscribe = onSnapshot(collection(db, "tasks"), ()=>{
-          const tasks =[];
-          querySnapshot.forEach((doc)=> {
-            tasks.push(doc.data().title);
-          });
-          console.log("Current tasks:", tasks.join(", "));
-        }); */
-        
-
+//CREAR PRODUCTOS
         export async function addTask(title,description){
           try {
             const docRef = await addDoc(collection(db, "task"), { //funcion asincrona para que mande los datos a la colección "task"
@@ -50,4 +45,24 @@
           });
 
           return mappedArrray
+        }
+
+
+        // LOGIN
+        export function newUser(email,password){
+          createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => { //promesa --> despues de hacer algo x, realiza algo y
+            // Signed in 
+            const user = userCredential.user;
+            console.log(user);
+            // ...
+          })
+          .catch((error) => {
+            //const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+
+            alert(errorMessage)
+          });
+        
         }
