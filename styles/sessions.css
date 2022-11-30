@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;700&display=swap');
+#font{
+    font-family: 'Cormorant', serif;
+    color: black;
+    }
+
+    .header{
+        margin-top: 10%;
+        
+    }
+    .justifySection{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .button-centered{
+        margin-left: 43% ;
+        margin-right: 43% ;
+        margin-top: 5%;
+
+        display: flex;
+        flex-direction: column;
+        align-self: center;  
+    }
+
+
+    @media (max-width: 414px) {
+
+        .pass-confirm{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .header{
+
+        }
+
+    }

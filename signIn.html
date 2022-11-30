@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/styles/sessions.css">
+</head>
+<body id="font" class="header">
+
+    <section >
+        <section class="justifySection">
+            <h2 class="is-size-3 has-text-weight-bold"> You don't have an account? Sign in now!</h2>
+            <p class="is-size-5">Join our community and discover the wonders of designer dresses from the one and only Teuta matoshi.</p> 
+            <p class="is-italic has-text-weight-medium is-size-5">""Made from women for women"</p>
+    
+        </section>
+        
+        <section class="justifySection">
+            <form action="submit">
+              <label for="email">Email</label>
+              <input type="text" class="mx-6 my-4" id="email">
+              <br>
+              <label for="password">Password</label>
+              <input type="password" id="password" class="mx-5">
+    
+              <label for="password-confirm" class="pass-confirm">Confirm your password</label>
+              <input type="password-confirm" id="password" class="pass-confirm">
+              <button id="sign-in-button redirect" class = "button-centered" type="submit">Sign in</button>
+          </form>
+        </section>
+    
+    </section>
+
+</body>
+
+<script type="module" src="./scripts/firebase.js"></script>
+<script type="module" src="./scripts/signInUser.js"></script>
+</html>

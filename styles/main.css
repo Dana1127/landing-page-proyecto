@@ -36,6 +36,11 @@ color: #9A9A9A;
 
 #button-admin{
 /* display:none; */
+display: flex;
+
+
+
+align-self: flex-start;
 }
 
 .mini-left{

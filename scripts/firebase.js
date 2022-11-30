@@ -2,7 +2,8 @@
       //Importo solo los metodos que voy a usar de firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
         import { getFirestore, collection, addDoc, getDocs, onSnapshot, query, where} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js" 
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js" 
+        import{validateUserState} from './index'
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -48,7 +49,7 @@
         }
 
 
-        // LOGIN
+        //SIGN IN
         export function newUser(email,password){
           createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => { //promesa --> despues de hacer algo x, realiza algo y
@@ -66,3 +67,50 @@
           });
         
         }
+
+          //LOGIN
+          export function login(email,password){
+            signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              // Signed in 
+              const user = userCredential.user;
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert(errorMessage);
+            });
+
+          }
+  
+          export function signOut(){
+            signOut(auth).then(() => {
+              // Sign-out successful.
+            }).catch((error) => {
+              // An error happened.
+            });
+            
+          }
+
+
+          onAuthStateChanged(auth, (user) => {
+            if (user) {
+              const uid = user.uid;
+              validateUserState(true);
+
+          
+            } else {
+
+              validateUserState(false);
+            }
+          });
+
+          const buttonRedirect = document.getElementById('redirect')
+
+          if(validateUserState === true){
+            redirect.innerHTML= "";
+            redirect.innerHTML += `
+            <a href="./index.html"></a>`
+          } else{
+            alert('There´s a problem with your account session')
+          }

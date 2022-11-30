@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-in</title>
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/styles/sessions.css">
 </head>
-<body>
+</head>
+<body id="font">
     
-    <section>
+    <h1 class="is-size-3 has-text-weight-bold"> Log in</h1>
+    
+    <section class="justifySection">
         <form action="submit">
-          <label for="email">Email</label>
-          <input type="text" id="email">
+          <label for="login-email">Email</label>
+          <input type="text" id="login-email">
           <br>
-          <label for="password">Password</label>
-          <input type="password" id="password">
-          <button id="sign-in-button" type="submit">Sign in</button>
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password">
+
+          <div id="verifyAccount">
+
+          </div>
+         <button id="login-button redirect" class = "button-centered" type="submit">Login</button> 
       </form>
+    </section>
 
 </body>
 
 <script type="module" src="./scripts/firebase.js"></script>
-<script type="module" src="./scripts/signIn.js"></script>
+<script type="module" src="./scripts/sessionsUser.js"></script>
 </html>

@@ -36,4 +36,5 @@ async function clickForm(e){
   //Este es para actualizarlas (por eso el await)
   tasks = await getAllTasks() ;
   displayTasks();
+  alert('A new product has been added to the webapage');
 }
